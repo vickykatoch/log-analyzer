@@ -5,6 +5,7 @@ const readline = require('readline');
 
 server.on('request', (req, res) => {
       let ctr = 0;
+      res.setHeader('Content-Type', 'text/html');
       const lineReader = readline.createInterface({
             input: fs.createReadStream('./big.file')
       });
