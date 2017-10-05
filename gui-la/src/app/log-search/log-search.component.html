@@ -1,0 +1,18 @@
+<div class="container-fluid mt-2">
+  <div class="row">
+    <div class="col-10">
+      <input type="text" class="form-control form-control-md" #searchBox>
+    </div>
+    <div class="col-2">
+      <button class="btn btn-primary" (click)="onSearch(searchBox.value)">Search</button>
+    </div>
+  </div>
+  <div class="row" *ngFor="let log of logData">
+    <div class="col-3">
+      {{log.time}}
+    </div>
+    <div class="col-9">
+      {{log.text}}
+    </div>
+  </div>
+</div>
